@@ -18,6 +18,11 @@ This repository contains scripts to simultaneously collect the following signals
 6. Fifine USB microphone.
 7. A Bluetooth Beacon.
 
+
+## System Setup
+The system setup guide is explained in TCFD Sleep Study - A Summary.docx and TCFD Sleep Study - A Summary.docx.
+
+
 ## Code Description
 Please run `INSTALL.sh` script in a command line on a Raspberry Pi to install all the necessary software before using the scripts in this repository. The `gui.py` contains the wrapper codes needed to record human movement and ambient environement data (including illuminance, temperature and humidity). The `binarizeData.py` script can be used to convert data stored in text files to a binary format (specifically .mat). The `mseComputation.py` utilizes the compiled `mse` script to perform multi-scale entropy computations on various 1-D signals including the global difference signal. The `uploadToCloud.sh` is an example script that can be used to upload recorded data to a cloud database.The scripts `binarizeData.py`, `mseComputation.py` and `uploadToCloud.py` are all called from `gui.py` as subprocesses.
 
