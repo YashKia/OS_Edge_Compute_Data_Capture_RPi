@@ -58,5 +58,9 @@ rclone move /home/pi/OS_Edge_Compute_Data_Capture/data/geolocationToolbox ${remo
 # Delete all video-files that were recorded
 rm -rf /home/pi/OS_Edge_Compute_Data_Capture/data/Videos/*
 
+
+find /home/pi/PIR-interface/data/ -type f -mtime +2 -exec rm {} \;
+
+
 # Run the upload_complete.py GUI to display that upload is indeed complete
 sudo python3 /home/pi/OS_Edge_Compute_Data_Capture/codes/upload_complete.py
